@@ -1,0 +1,24 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Accesibilidad"
+             x:Class="Accesibilidad.App">
+    <Application.Resources>
+        <!--Estilos para configurar el modo alto contraste-->
+        <Style TargetType="Label" x:Key="AltoContraste">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="BackgroundColor" Value="Yellow"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        
+        <!--Estilos por defecto-->
+        <Style TargetType="Label" x:Key="Default">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="None"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

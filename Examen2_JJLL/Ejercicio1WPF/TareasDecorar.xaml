@@ -1,0 +1,36 @@
+﻿<Window x:Class="Ejercicio1WPF.TareasDecorar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio1WPF"
+        mc:Ignorable="d"
+        Title="TareasDecorar" Height="450" Width="800" Background="LightGray">
+
+
+    <StackPanel>
+        <TextBlock Text="TAREAS PARA DECORAR NUESTRA AULA" FontWeight="Black" FontSize="30" TextDecorations="Underline" HorizontalAlignment="Center"/>
+        <WrapPanel Margin="10" HorizontalAlignment="Center">
+            <StackPanel>
+                <Label Content="Tares a Realizar:"/>
+                <CheckBox Content="Decorar el panel de anuncios"/>
+                <CheckBox Content="Decorar la entrada de clase"/>
+                <CheckBox Content="Decorar las ventanas"/>
+                <CheckBox Content="Hacer muñecos de nieve de papel"/>
+                <CheckBox Content="Montar un arbol de navidad"/>
+                <CheckBox Content="Poner guirnaldas"/>
+                
+            </StackPanel>
+            <Button Content="Guardar Tarea" Height="20" Margin="20,0,20,0"/>
+            <Button Content="Eliminar Tarea" Height="20"/>
+        </WrapPanel>
+     
+
+        <ListView Height="170">
+
+        </ListView>
+
+        <Button Content="Volver al Menú" Width="200" Margin="30"></Button>
+    </StackPanel>
+
+</Window>

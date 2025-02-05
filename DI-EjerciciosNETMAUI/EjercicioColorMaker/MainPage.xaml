@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioColorMaker.MainPage"
+             
+             >
+
+
+    <ScrollView x:Name="panel">
+        <StackLayout
+         VerticalOptions="Center"
+         Padding="30">
+
+            <Frame CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Color Maker" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="Red" FontSize="Caption"/>
+                    <Slider Minimum="0" Maximum="255" x:Name="slRojo" ValueChanged="slidderValueChanged" MinimumTrackColor="DarkRed" ThumbColor="Red"/>
+                    <Label Text="Green" FontSize="Caption"/>
+                    <Slider Minimum="0" Maximum="255" x:Name="slVerde" ValueChanged="slidderValueChanged" MinimumTrackColor="DarkRed" ThumbColor="Green"/>
+                    <Label Text="Blue" FontSize="Caption"/>
+                    <Slider Minimum="0" Maximum="255" x:Name="slAzul" ValueChanged="slidderValueChanged" MinimumTrackColor="DarkRed" ThumbColor="Blue"/>
+                    <Frame Margin="0,20,0,20">
+                        <Label x:Name="lbColor" Text="Hex Color: #FFFFFF" />
+                    </Frame>
+                    <Button x:Name="btnColor" Text="Color Aleatorio" Clicked="btnColor_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+   
+
+
+</ContentPage>

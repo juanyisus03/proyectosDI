@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemploLayouts.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="Layout HorizontalStackPanel" FontAttributes="Bold" FontSize="Header"/>
+            <HorizontalStackLayout Margin="20" Background="DodgerBlue">
+                <Rectangle Fill="red" HeightRequest="30" WidthRequest="30"></Rectangle>
+                <Label Text="RED" FontSize="Body"/>
+                <Button Text="Enviar"/>
+            </HorizontalStackLayout>
+
+            <Label Text="Layout VerticalStackPanel" Background="DarkBlue" FontAttributes="Bold" FontSize="Header"/>
+            <VerticalStackLayout>
+                <BoxView Color="LightBlue" HeightRequest="50"></BoxView>
+                <BoxView Color="Orange" HeightRequest="50"></BoxView>
+                <BoxView Color="Lime" HeightRequest="50"></BoxView>
+                <BoxView Color="Khaki" HeightRequest="50"></BoxView>
+            </VerticalStackLayout>
+
+            <Label Text="Layout Grid" FontAttributes="Bold" FontSize="Header"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Column 0, Row 0" Grid.Column="0" Grid.Row="0" WidthRequest="200"/>
+                <Label Text="Column 1, Row 0" Grid.Column="1" Grid.Row="0"/>
+                <Label Text="Column 0, Row 1" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Column 1, Row 1" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Label Text="Layout FlexLayout" FontAttributes="Bold" FontSize="Header"/>
+            <FlexLayout Direction="Row" AlignItems="Center" JustifyContent="Center" Wrap="Wrap">
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100"></BoxView>
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100"></BoxView>
+            </FlexLayout>
+
+            <Label Text="Layout AbsoluteLayout" FontAttributes="Bold" FontSize="Header"/>
+            <AbsoluteLayout Background="PeachPuff" WidthRequest="200" HeightRequest="200">
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="5"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="10"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="15"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="20"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="25"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="30"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="35"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="40"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="45"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="50"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="55"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="60"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="65"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="70"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="75"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="80"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="85"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="90"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="95"></BoxView>
+                
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="100"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="105"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="110"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="115"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="120"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="125"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="130"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="145"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="150"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="155"></BoxView>
+                <BoxView Color="Orange" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="160"></BoxView>
+                <BoxView Color="LightBlue" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="165"></BoxView>
+
+                <BoxView Color="Khaki" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="170"></BoxView>
+                <BoxView Color="Lime" HeightRequest="100" WidthRequest="100" AbsoluteLayout.LayoutFlags="None" AbsoluteLayout.LayoutBounds="200,0,50,50" Rotation="175"></BoxView>
+                
+                
+
+
+
+            </AbsoluteLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

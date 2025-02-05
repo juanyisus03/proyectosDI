@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjercicioRecetas.Pages.CarouselRecetas"
+             Title="FAVORITOS"
+             IconImageSource="favorito.png"
+             Background="LightYellow">
+
+    <VerticalStackLayout HorizontalOptions="CenterAndExpand" Margin="10,10,10,10">
+        <Label Text="Mis Recetas Favoritas" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,20"/>
+        <Label Text="Aquí aparecerán tus recetas favoritas" FontSize="Header" HorizontalTextAlignment="Center" TextColor="LightGray" />
+        <CarouselView x:Name="crlRecetas" ItemsSource="{Binding Recetas}" HeightRequest="350" IndicatorView="indicator">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" BorderColor="LightGray" HeightRequest="250">
+                        <StackLayout>
+                            <Label Text="{Binding Nombre}" FontAttributes="Bold"/>
+                            <Image Source="{Binding RutaImg}" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Descripcion}"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView x:Name="indicator" HorizontalOptions="Center" IndicatorSize="20"/>
+    </VerticalStackLayout>
+
+</ContentPage>

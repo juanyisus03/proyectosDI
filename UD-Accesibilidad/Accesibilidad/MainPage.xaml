@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Accesibilidad.MainPage">
+
+    <StackLayout Padding="20" Spacing="10">
+        
+        <!-- Encabezado del formulario-->
+        <Label Text="Formulario de Registro" FontSize="Header" Padding="0,20,0,20" SemanticProperties.HeadingLevel="Level1" 
+                SemanticProperties.Description="Encabezado del formulario"/>
+
+        <Label x:Name="lbNombre"  Text="Usuario: " Style="{DynamicResource Default}"   SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Titulo que indica que campo vas a rellenar"/>
+        <Entry Placeholder="Introduce un nombre del usuario"  SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Introduce aqui el usuario"/>
+
+        <Label x:Name="lbPassword"  Text="Contraseña: " Style="{DynamicResource Default}" SemanticProperties.HeadingLevel="Level2" 
+                SemanticProperties.Description="Titulo que indica que campo vas a rellenar"/>
+        <Entry Placeholder="Introduce tu contraseña" IsPassword="True" SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Introduce aqui la contraseña del usuario"/>
+
+        <Button x:Name="btnCambiar" Text="Cambiar al modo Alto Contraste" SemanticProperties.HeadingLevel="Level3" 
+                SemanticProperties.Description="Boton que activa el modo de alto contraste en la aplicacion" Clicked="btnCambiar_Clicked"/>
+
+    </StackLayout>
+   
+
+</ContentPage>

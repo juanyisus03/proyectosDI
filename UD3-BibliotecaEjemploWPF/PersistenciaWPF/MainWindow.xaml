@@ -1,0 +1,34 @@
+﻿<Window x:Class="PersistenciaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersistenciaWPF"
+        mc:Ignorable="d"
+        Title="Persistencia Propiedades WPF" Background="LightYellow" Height="450" Width="600" ResizeMode="NoResize">
+
+    <StackPanel HorizontalAlignment="Center" Background="LightBlue">
+        <Label Content="Persistencia de los datos en un formulario" FontSize="18" FontWeight="Heavy" HorizontalAlignment="Center"/>
+        <WrapPanel>
+            <Label Content="Alumno/a: "/>
+            <TextBox x:Name="txtNombre" Width="120" Height="20"/>
+        </WrapPanel>
+
+        <CheckBox Content="Tiene Beca" x:Name="chkBeca" Margin="10"/>
+        <WrapPanel>
+            <Label Content="Estudios del Alumno/a" Margin="10"/>
+            <ComboBox x:Name="cbEstudios" Width="150" Height="20">
+            <ComboBoxItem>Sin Estudios</ComboBoxItem>
+            <ComboBoxItem>Educacion Primaria</ComboBoxItem>
+            <ComboBoxItem>Educacion Secundaria</ComboBoxItem>
+            <ComboBoxItem>Bachillerato</ComboBoxItem>
+            <ComboBoxItem>CF Grado Medio</ComboBoxItem>
+            <ComboBoxItem>CF Grado Superior</ComboBoxItem>
+            <ComboBoxItem>Universidad</ComboBoxItem>
+        </ComboBox>
+        </WrapPanel>
+        <Button Content="Guardar Datos del Alumnado" x:Name="btnGuardar" Width="170" Height="20" Margin="15" Click="btnGuardar_Click"/>
+        <Button Content="Cargar Datos del Alumnado" x:Name="btnCargar" Width="170" Height="20" Margin="15" Click="btnCargar_Click"/>
+    </StackPanel>
+
+</Window>

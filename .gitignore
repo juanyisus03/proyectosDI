@@ -1,0 +1,58 @@
+# Ignorar archivos generados por Visual Studio en la carpeta repos
+**/bin/
+**/obj/
+
+# Archivos de configuración específicos de Visual Studio
+**/.vs/
+**/.vscode/
+**/.idea/
+
+# Archivos específicos de .NET Core / MAUI / Xamarin
+**/.xamarin/
+**/.maui/
+**/packages/
+
+# Archivos temporales y de usuario
+**/*.user
+**/*.userosscache
+**/*.suo
+**/*.userprefs
+**/*.ncb
+**/*.sdf
+**/*.dbmdl
+**/*.bak
+**/*.Backup
+
+# Archivos de depuración y salida
+**/*.pdb
+**/*.mdb
+**/*.cache
+**/*.log
+
+# Archivos relacionados con el control de versiones de Visual Studio
+**/*.vspscc
+**/*.vssscc
+
+# Archivos temporales del sistema operativo
+**/Thumbs.db
+**/ehthumbs.db
+
+# Archivos generados por ReSharper
+**/_ReSharper/
+**/.reSharper/
+
+# Archivos de configuración específicos de Visual Studio para Mac
+**/.vscode/
+
+# Archivos de respaldo de proyectos de WinForms o WPF
+**/App.config.user
+**/WindowsFormsApplication*
+
+# Otros archivos específicos de configuración
+**/secrets/
+
+# Archivos de instalación de Windows
+**/*.cab
+**/*.msi
+**/*.msm
+**/*.msp

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TiendaInformatica.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TiendaInformatica.Pages"
+    Title="" BackgroundColor="#FFD590">
+
+ 
+
+    <FlyoutItem Title="Chip Store" Icon="upc.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ChipStore}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Componentes" Icon="componente.png">
+        <ShellContent ContentTemplate="{DataTemplate local:ComponentesPage}"/>
+    </FlyoutItem>
+  
+    <FlyoutItem Title="Dispositivos Moviles" Icon="telefono.png">
+        <ShellContent ContentTemplate="{DataTemplate local:MovilesPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Portatil" Icon="portatil.png">
+        <ShellContent ContentTemplate="{DataTemplate local:PortatilesPage}"/>
+    </FlyoutItem>
+
+</Shell>

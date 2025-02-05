@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conexion="clr-namespace:Paqueteria.ViewModels"
+             x:Class="Paqueteria.MainPage">
+    <ContentPage.BindingContext>
+        <conexion:PaqueteViewModels/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label Text="Gestion de Paqueteria" FontSize="Large"/>
+
+            <Border>
+                <VerticalStackLayout>
+                    <Label Text="Agregar Nuevo Paquete" FontSize="Header" TextColor="#005AFF"/>
+                    <Entry Placeholder="Descripcion del Paquete" Text="{Binding Descripcion, Mode=TwoWay}"/>
+                    <Picker SelectedItem="{Binding Estado, Mode=TwoWay}">
+                        <Picker.Items>
+                            <x:String>Pendiente</x:String>
+                            <x:String>En transito</x:String>
+                            <x:String>Entregado</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button Text="Agregar Paquete" Command="{Binding AgregarPaqueteCommand}" TextColor="White" BackgroundColor="#005AFF"/>
+                    <Button Text="Eliminar Paquete" Command="{Binding EliminarPaqueteCommand}" TextColor="White" BackgroundColor="Red"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <VerticalStackLayout>
+                <Label Text="Lista de Paquetes" FontSize="Header" TextColor="#005AFF"/>
+
+                <CollectionView ItemsSource="{Binding ListaPaquetes}" SelectedItem="{Binding PaqueteSeleccionado, Mode=TwoWay}" SelectionMode="Single">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border>
+                                    <VerticalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="Id:"/>
+                                            <Label Text="{Binding Id}"/>
+                                        </HorizontalStackLayout><HorizontalStackLayout>
+                                            <Label Text="Descripcion:"/>
+                                            <Label Text="{Binding Descripcion}"/>
+                                        </HorizontalStackLayout><HorizontalStackLayout>
+                                            <Label Text="Estado:"/>
+                                            <Label Text="{Binding Estado}"/>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FichajeTrabajador.MainPage">
+
+    <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        <!--Estado Actual-->
+        <Label x:Name="StateLabel" Text="Estado:Fuera" TextColor="{DynamicResource EntradaColor}"/>
+
+        <!--Botones entrada y salida-->
+
+        <HorizontalStackLayout Spacing="10"  Margin="0,20">
+            <Button x:Name="btnEntrada" Text="Fichar Entrada" Clicked="btnEntrada_Clicked"/>
+            <Button x:Name="btnSalida" Text="Fichar Salida" BackgroundColor="Red" Clicked="btnSalida_Clicked"/>
+        </HorizontalStackLayout>
+
+        <!--Registro de los Fichajes-->
+        <Label Text="Registro de Fichajes" Margin="0,20,0,10" Style="{StaticResource EstiloLabel}"/>
+
+
+        <CollectionView x:Name="cvFichaje">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}"/>
+            </CollectionView.ItemsSource>
+            
+        </CollectionView>
+
+    </VerticalStackLayout>
+
+
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EjemploSQLClase.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="BBDD con SQLite." FontSize="15" FontAttributes="Bold"/>
+
+            <Entry x:Name="txtNombre" Placeholder="Introduzca nombre de usuario"/>
+            <Entry x:Name="txtEmail" Placeholder="Introduzca email de usuario"/>
+            <Entry x:Name="txtEdad" Placeholder="Introduzca edad de usuario"/>
+            <Entry x:Name="txtCiudad" Placeholder="Introduzca ciudad de usuario"/>
+
+            <Button x:Name="btnAnadir" Text="Añadir Usuario" Clicked="btnAnadir_Clicked"/>
+
+            <ListView x:Name="lvUsuarios" BackgroundColor="Aqua">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="{Binding Email}"/>
+                                <Label Text="{Binding Edad}"/>
+                                <Label Text="{Binding Ciudad}"/>
+                            </HorizontalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="btnEliminar" Text="Eliminar usuario" Clicked="btnEliminar_Clicked" />
+            <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

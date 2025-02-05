@@ -1,0 +1,28 @@
+﻿<Page x:Class="EjemploFrame.Pages.PaginaClientes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EjemploFrame.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="PaginaClientes">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="30">
+            <TextBlock Text="GESTION DE CLIENTES"
+                       FontSize="18" Margin="20"/>
+            <TextBlock Text="Numero de clientes"
+                       FontSize="10"
+                       Foreground="DarkSlateBlue" Margin="20"/>
+            <WrapPanel Margin="20">
+                <Label Content="0"/>
+                <Slider Minimum="0" Maximum="10" Width="50"></Slider>
+                <Label Content="10"/>
+            </WrapPanel>
+            <Button x:Name="btnFactura" Content="Facturas" Width="100" Height="20" Margin="20"/>
+            <Button x:Name="btnVolverPI" Content="Volver a Inicio" Width="100" Height="20" Margin="20,20,20,20" Click="btnVolverPI_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TiendaInformatica.Pages.MovilesPage"
+             Title="Moviles">
+    <VerticalStackLayout>
+
+        <Image Source="fondo_movil.png" HeightRequest="200"/>
+
+        <Label Text="Calificacion de los moviles: " Margin="0,20,0,20"/>
+
+        <CollectionView ItemsSource="{Binding moviles}" x:Name="cvMoviles" HeightRequest="200">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="20">
+                        <Image Source="{Binding Img}" HeightRequest="100"/>
+                        <Label Text="{Binding Nombre}" FontSize="12" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Valoracion}" FontSize="12" HorizontalOptions="Center"  FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

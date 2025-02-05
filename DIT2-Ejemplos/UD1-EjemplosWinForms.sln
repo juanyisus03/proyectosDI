@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploTWF", "EjemploTWF\EjemploTWF.csproj", "{DAED9014-0026-40D6-A76E-7F9A3C81F4E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploPeliculas", "EjemploPeliculas\EjemploPeliculas.csproj", "{B03784D1-D306-4F96-B9B1-7C47FDDE86CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploColorDialog", "EjemploColorDialog\EjemploColorDialog.csproj", "{4AA9E191-BCE1-4D27-ADD6-CEBEB60D1C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploOpenFile", "EjemploOpenFile\EjemploOpenFile.csproj", "{B42BE502-52BD-4D7D-82C1-933412181C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploSaveDialog", "EjemploSaveDialog\EjemploSaveDialog.csproj", "{EEF8CF9F-8F91-4318-AD39-FEBB6A550366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploFormSecundario", "EjemploFormSecundario\EjemploFormSecundario.csproj", "{336C5576-FE63-4EB3-B60C-585C8C54849B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAED9014-0026-40D6-A76E-7F9A3C81F4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAED9014-0026-40D6-A76E-7F9A3C81F4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAED9014-0026-40D6-A76E-7F9A3C81F4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAED9014-0026-40D6-A76E-7F9A3C81F4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03784D1-D306-4F96-B9B1-7C47FDDE86CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03784D1-D306-4F96-B9B1-7C47FDDE86CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03784D1-D306-4F96-B9B1-7C47FDDE86CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03784D1-D306-4F96-B9B1-7C47FDDE86CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA9E191-BCE1-4D27-ADD6-CEBEB60D1C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA9E191-BCE1-4D27-ADD6-CEBEB60D1C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA9E191-BCE1-4D27-ADD6-CEBEB60D1C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA9E191-BCE1-4D27-ADD6-CEBEB60D1C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42BE502-52BD-4D7D-82C1-933412181C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42BE502-52BD-4D7D-82C1-933412181C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42BE502-52BD-4D7D-82C1-933412181C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42BE502-52BD-4D7D-82C1-933412181C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF8CF9F-8F91-4318-AD39-FEBB6A550366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF8CF9F-8F91-4318-AD39-FEBB6A550366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF8CF9F-8F91-4318-AD39-FEBB6A550366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF8CF9F-8F91-4318-AD39-FEBB6A550366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{336C5576-FE63-4EB3-B60C-585C8C54849B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{336C5576-FE63-4EB3-B60C-585C8C54849B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{336C5576-FE63-4EB3-B60C-585C8C54849B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{336C5576-FE63-4EB3-B60C-585C8C54849B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B14E3E7-6645-4EBE-AE0B-295DA5C17AB7}
+	EndGlobalSection
+EndGlobal

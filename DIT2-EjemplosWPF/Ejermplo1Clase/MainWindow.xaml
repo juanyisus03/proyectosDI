@@ -1,0 +1,40 @@
+﻿<Window x:Class="Ejermplo1Clase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejermplo1Clase"
+        mc:Ignorable="d"
+        Title="Primer Ejemplo WPF" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <TextBlock  Text="Presentacion Tema 2 Controles Básicos y Eventos"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,30" 
+                    FontFamily="Algerian" 
+                    FontSize="18"/>
+        <Button Content="Enviar Informe"
+                x:Name="btnEnviar"
+                Click="btnEnviar_Click"
+                HorizontalAlignment="Center"
+                Width="100"
+                Height="20"
+                />
+
+        <ListBox x:Name="lbOpciones" SelectionChanged="lbOpciones_SelectionChanged" Margin="15">
+            <ListBoxItem>Opcion 1</ListBoxItem>
+            <ListBoxItem>Opcion 2</ListBoxItem>
+            <ListBoxItem>Opcion 3</ListBoxItem>
+            <ListBoxItem>Opcion 4</ListBoxItem>
+        </ListBox>
+
+        <ComboBox x:Name="cbCiudades">
+            <ComboBoxItem>Lucena</ComboBoxItem>
+            <ComboBoxItem>Cabra</ComboBoxItem>
+            <ComboBoxItem>Antequera</ComboBoxItem>
+            <ComboBoxItem>Rute</ComboBoxItem>
+        </ComboBox>
+                 
+
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio_App_Banco.MainPage">
+
+
+
+
+    <Grid BackgroundColor="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout Grid.Row="0" Background="white" Padding="20">
+            <Image Source="perfil.png" Aspect="Fill" HeightRequest="100" WidthRequest="100"/>
+            <StackLayout Spacing="10" Padding="20" Margin="20,0,20,0">
+                <Label Text="Total Balance:"/>
+                <Label Text="$ 40.000" FontAttributes="Bold"/>
+            </StackLayout>
+            <ImageButton Source="notificacion.png" HeightRequest="50" WidthRequest="50"/>
+        </HorizontalStackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Image Source="tarjeta.png"/>
+        </StackLayout>
+
+        <HorizontalStackLayout Grid.Row="2" Background="white" Padding="20" >
+            <ImageButton Source="depositar.png"  Margin="10,0,10,0" Aspect="Fill" HeightRequest="100" WidthRequest="100"/>
+            <ImageButton Source="retirada.png" Margin="10,0,10,0" Aspect="Fill" HeightRequest="100" WidthRequest="100"/>
+            <ImageButton Source="transferencia.png" Margin="10,0,10,0" Aspect="Fill" HeightRequest="100" WidthRequest="100"/>
+        </HorizontalStackLayout>
+
+        <StackLayout Grid.Row="3" BackgroundColor="White">
+            <ScrollView>
+                <CollectionView ItemsSource="{Binding operaciones}" ItemsLayout="HorizontalList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                                <Label Text="{Binding .}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </StackLayout>
+
+    </Grid>
+
+
+
+
+
+
+</ContentPage>

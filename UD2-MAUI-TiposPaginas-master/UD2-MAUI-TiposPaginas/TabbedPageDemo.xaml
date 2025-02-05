@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UD2_MAUI_TiposPaginas.TabbedPages"
+             x:Class="UD2_MAUI_TiposPaginas.TabbedPageDemo"
+             Title="Taller Mecánico">
+
+
+    <local:Servicios />
+    <local:Citas />
+    <local:Contacto />
+    <!--
+    <ContentPage Title="Servicios" BackgroundColor="White">
+       
+    </ContentPage>
+
+    <ContentPage Title="Citas" BackgroundColor="White">
+        
+    </ContentPage>
+
+    <ContentPage Title="Contacto" BackgroundColor="White">
+       
+    </ContentPage>
+    -->
+</TabbedPage>

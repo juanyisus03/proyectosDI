@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:conexion="clr-namespace:PrimerProyectoMVVM.ViewModels"
+             x:Class="PrimerProyectoMVVM.MainPage">
+
+    <ContentPage.BindingContext>
+        <conexion:AgendaViewModels/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout  BackgroundColor="{Binding BgColor}" Padding="0,50,0,0">
+
+            <Label Text="Agenda de Contactos" FontSize="27" TextColor="White"/>
+
+            <BoxView HorizontalOptions="FillAndExpand" Color="Silver" HeightRequest="10"/>
+
+            <Button Text="Cambiar Color" x:Name="btnColor" BackgroundColor="DimGrey" TextColor="White" WidthRequest="150" Command="{Binding CambiarColor}"></Button>
+
+            <BoxView HorizontalOptions="FillAndExpand" Color="Silver" HeightRequest="10"/>
+
+            <ListView  BackgroundColor="{Binding BgColor}" ItemsSource="{Binding ListaContactos}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <VerticalStackLayout>
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="{Binding Nombre}" FontSize="15"/>
+                                    <Label Text="{Binding Nombre}" FontSize="15" TextColor="{Binding TxtColor}"/>
+
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="10">
+                                    <Label Text="{Binding Telefono}" FontSize="15"/>
+                                    <Label Text="{Binding Sexo}" FontSize="15" TextColor="{Binding TxtColor}"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

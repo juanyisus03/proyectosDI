@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ControlBotonesPaginacion.Paginacion1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ControlBotonesPaginacion"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="240">
+    <WrapPanel>
+        <Button Margin="0,0,10,0" Content="&lt;&lt;" Width="25" x:Name="btnPrimero" Click="btnPrimero_Click"/>
+        <Button Margin="0,0,10,0" Content="&lt;" Width="25" x:Name="btnAnterior" Click="btnAnterior_Click"/>
+        <Label x:Name="lbPaginacion" Content="Pagina 1 de 10"/>
+        <Button Margin="10,0,10,0" Content=">" Width="25" x:Name="btnSiguiente" Click="btnSiguiente_Click"/>
+        <Button Content=">>" Width="25" x:Name="btnUltimo" Click="btnUltimo_Click"/>
+    </WrapPanel>
+</UserControl>

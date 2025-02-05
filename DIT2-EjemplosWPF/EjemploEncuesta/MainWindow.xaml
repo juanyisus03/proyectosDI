@@ -1,0 +1,54 @@
+﻿<Window x:Class="EjemploEncuesta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EjemploEncuesta"
+        mc:Ignorable="d"
+        Title="MiniEscuesta" Height="450" Width="800" WindowStyle="ThreeDBorderWindow">
+    <Grid Margin="10" Background="Coral">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/> 
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0"  Background="Blue" CornerRadius="10" Height="30">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="ENCUESTA INFORMATICA CICLOS FORMATIVOS"
+                    FontSize="15"
+                    FontWeight="Black"
+                    FontFamily="papyrus"/>
+ 
+                <Image Source="images/pago.png" Margin="250,0,0,0"/>
+            </StackPanel>
+        
+        </Border>
+
+        <StackPanel Grid.Row="1" x:Name="Panel1">
+            <TextBlock Text="Seleccione un sistema operativo: "/>
+            <RadioButton x:Name="rdWindows" Content="Windows"/>
+            <RadioButton x:Name="rdLinux" Content="Linux"/>
+            <RadioButton x:Name="rdMac" Content="MAc"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" x:Name="Panel2">
+            <TextBlock Text="Seleccione una especialidad: "/>
+            <CheckBox x:Name="chbProgramavion" Content="Programacion"/>
+            <CheckBox x:Name="chbDiseno" Content="Diseño"/>
+            <CheckBox x:Name="chbAdm" Content="Administracion de redes"/>
+        </StackPanel>
+
+        <WrapPanel Grid.Row="3" x:Name="Panel3">
+            <TextBlock Text="Horas de programacion:"/>
+            <TextBox x:Name="txtHoras" Text="0" Margin="20,0,0,0"/>
+        </WrapPanel>
+
+        <DockPanel VerticalAlignment="Bottom" Background="Aquamarine" Grid.Row="4">
+            <Button x:Name="btnInforme" Content="Generar Informe" Width="120" Height="20" HorizontalAlignment="Left" Click="btnInforme_Click"/>
+            <Image x:Name="imgSalir" Source="images/salir.png" HorizontalAlignment="Right" MouseLeftButtonDown="imgSalir_MouseLeftButtonDown"/>
+        </DockPanel>
+
+    </Grid>
+</Window>

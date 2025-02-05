@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio2_NETMAUI.MainPage"
+            BarBackgroundColor="Orange"
+            BarTextColor="White">
+
+
+    <ContentPage Title="INICIO">
+        <ScrollView>
+            <VerticalStackLayout HorizontalOptions="CenterAndExpand" Margin="10,10,10,10">
+
+                <Frame CornerRadius="20" Padding="20" Margin="0,20,0,20" BackgroundColor="LightYellow">
+                    <Label Text="COCHES DEL SUR S.A" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+                </Frame>
+
+
+                <Label Text="¿Cual es tu siguiente movimiento?"  FontSize="Medium" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+
+                <Image Source="portadacoches.jpg" WidthRequest="300" Aspect="AspectFit" Margin="20"/>
+
+                <Frame CornerRadius="20" Padding="10">
+                    <VerticalStackLayout>
+                        <Border Margin="0,20,0,20">
+                            <Entry x:Name="txtModelo" Placeholder="Marca y Modelo"/>
+                        </Border>
+
+                        <HorizontalStackLayout>
+                            <Border>
+                                <Entry x:Name="txtProvincia" Placeholder="Provincia" WidthRequest="100"/>
+                            </Border>
+                            <Border Margin="20,0,20,0">
+                                <Entry x:Name="txtCombustible" Placeholder="Tipo de Combustible" WidthRequest="200"/>
+                            </Border>
+                        </HorizontalStackLayout>
+
+                        <Button x:Name="btnMostrar" Text="Mostrar Datos Coche" Clicked="btnMostrar_Clicked" Margin="0,20,0,20"/>
+
+                        <VerticalStackLayout x:Name="vslDatos" IsVisible="Collapse" Background="LightBlue">
+                            <Label Text="Modelo de Coche:" TextColor="Blue"/>
+                            <Label x:Name="txtMostrarModelo" Text="" TextColor="Blue"/>
+                            <Label Text="Provincia:" TextColor="Blue"/>
+                            <Label x:Name="txtMostrarProvincia" Text="" TextColor="Blue"/>
+                            <Label Text="Tipo de Combustible" TextColor="Blue"/>
+                            <Label x:Name="txtMostrarCombustible" Text="" TextColor="Blue"/>
+
+                            <Button x:Name="btnOcultar" Text="Cerrar" Clicked="btnOcultar_Clicked"  Margin="0,20,0,20"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+    <ContentPage Title="Vender">
+        <VerticalStackLayout HorizontalOptions="Center" Margin="10,10,10,10">
+            <Label Text="Listado de Coches a la Venta" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,20"/>
+            <CarouselView x:Name="crlCoches" CurrentItemChanged="crlCoches_CurrentItemChanged" ItemsSource="{Binding Coches}" BackgroundColor="LightBlue" HeightRequest="300" WidthRequest="350" IndicatorView="indicator">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame BackgroundColor="White" BorderColor="LightBlue" HeightRequest="280" WidthRequest="330" HorizontalOptions="Center">
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"/>
+                                <Image Source="{Binding RutaImg}" Aspect="Fill" WidthRequest="150" HeightRequest="150" HorizontalOptions="Center"/>
+                                <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,10">
+                                    <Label Text="Precio:"/>
+                                    <Label Text="{Binding Precio}"/>
+                                    <Label Text="Euros"/>
+                                </HorizontalStackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="indicator" HorizontalOptions="Center" IndicatorSize="20"/>
+            <Button x:Name="btnSelecionar" Clicked="btnSelecionar_Clicked" Text="Seleccionar Coche"/>
+            <Label x:Name="txtSeleccionado"/>
+        </VerticalStackLayout>
+    </ContentPage>
+    <ContentPage Title="CONTACTO">
+        <VerticalStackLayout HorizontalOptions="Center" Margin="10" >
+            <Label Text="Contáctanos" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" Margin="0,0,0,20"/>
+            <Label Text="Nombre" FontSize="Body" HorizontalOptions="Start"/>
+            <Entry x:Name="txtNombre" HorizontalOptions="Start"  WidthRequest="400" Placeholder="Introduce tu nombre"/>
+            <Label Text="Correo Electrónico" FontSize="Body" HorizontalOptions="Start"/>
+            <Entry x:Name="txtCorreo" HorizontalOptions="Start"  WidthRequest="400" Placeholder="Introduce tu correo"/>
+            <Label Text="Mensaje" FontSize="Body" HorizontalOptions="Start"/>
+            <Entry x:Name="txtMensaje" HorizontalOptions="Start"  WidthRequest="400" Placeholder="Introduce tu mensaje aquí"/>
+            <Button Text="Enviar" x:Name="btnEnviar" BackgroundColor="Green" TextColor="White" Clicked="btnEnviar_Clicked"/>
+            <Label x:Name="txtConfirmar"/>
+        </VerticalStackLayout>
+    </ContentPage>
+
+</TabbedPage>

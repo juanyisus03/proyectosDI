@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TiendaInformatica.Pages.ChipStore"
+             Title="Chip Store">
+    <VerticalStackLayout>
+        <Image Source="Images/portada.png" HeightRequest="200" Margin="0,0,0,20"/>
+        <Label Text="Tienda de Informatica de la Subbetica"/>
+        <Image Source="Images/portada2.png" Margin="0,40,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

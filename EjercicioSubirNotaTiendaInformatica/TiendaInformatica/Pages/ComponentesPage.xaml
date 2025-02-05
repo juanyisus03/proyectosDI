@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TiendaInformatica.Pages.ComponentesPage"
+             Title="Componentes">
+   
+    
+    <VerticalStackLayout>
+        <Image Source="fondo_componentes.png" HeightRequest="200"/>
+
+        <CarouselView ItemsSource="{Binding componentes}" x:Name="clComponentes" HeightRequest="200">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    
+                    <VerticalStackLayout>
+                        <Image Source="{Binding Img}" HeightRequest="100"/>
+                        <Label Text="{Binding Nombre}" FontSize="12" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Valoracion}" FontSize="12" HorizontalOptions="Center"  FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </VerticalStackLayout>
+</ContentPage>

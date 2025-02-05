@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UD2-MAUI-TiposPaginas", "UD2-MAUI-TiposPaginas\UD2-MAUI-TiposPaginas.csproj", "{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB0FED8-ECC0-48A4-8DC9-5EC395E6C41B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {393D37A3-BF2A-482F-A3B2-29C5DA23513E}
+	EndGlobalSection
+EndGlobal

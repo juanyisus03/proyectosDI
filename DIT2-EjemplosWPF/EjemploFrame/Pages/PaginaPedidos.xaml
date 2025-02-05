@@ -1,0 +1,37 @@
+﻿<Page x:Class="EjemploFrame.Pages.PaginaPedidos"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EjemploFrame.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="PaginaPedidos">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".7*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="PEDIDOS DE LA EMPRESA"
+               FontSize="16"/>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Numero de pedido" FontSize="12" Margin="10,10,0,0"/>
+            <ComboBox Width="200">
+                <ComboBoxItem Content="Pedido1"></ComboBoxItem>
+                <ComboBoxItem Content="Pedido2"></ComboBoxItem>
+                <ComboBoxItem Content="Pedido3"></ComboBoxItem>
+                <ComboBoxItem Content="Pedido4"></ComboBoxItem>
+                <ComboBoxItem Content="Pedido5"></ComboBoxItem>
+            </ComboBox>
+        </WrapPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left">
+            <TextBlock Text="FECHA DE PEDIDO" Margin="20"/>
+            <Calendar HorizontalAlignment="Left" Margin="20"/>
+            <Button x:Name="btnVolver" Content="Volver a Inicio" Width="100" Height="20" Click="btnVolver_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

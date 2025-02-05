@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejemplo1MAUI.MainPage"
+             BackgroundColor="Azure"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Por favor, introduce tus credenciales:" FontSize="18" TextColor="Red"/>
+            <Label Text="Usuario:" FontSize="10"/>
+            <Entry Placeholder="Ej: pepetronic500"/>
+            <Label Text="Contraseña:" FontSize="10"/>
+            <Entry IsPassword="True" Placeholder="Ej: *************"/>
+            <Button Text="Enviar" Clicked="Button_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

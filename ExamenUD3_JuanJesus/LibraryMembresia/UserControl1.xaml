@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="LibraryMembresia.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LibraryMembresia"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="400">
+    <StackPanel HorizontalAlignment="Center">
+        <Label Content="Membresía del Cliente: "/>
+        <ListView x:Name="lvMembresia" SelectionMode="Single" ItemsSource="{Binding tipoMembresiaList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding .}"></Label>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <WrapPanel>
+            <Label Content="Fecha de inicio de la membresía: "/>
+            <DatePicker x:Name="dpInicio" SelectedDateChanged="dpInicio_SelectedDateChanged"/>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>

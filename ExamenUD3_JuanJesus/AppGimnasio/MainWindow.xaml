@@ -1,0 +1,23 @@
+﻿<Window xmlns:LibraryDNI="clr-namespace:LibraryDNI;assembly=LibraryDNI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppGimnasio"
+        xmlns:LibraryMembresia="clr-namespace:LibraryMembresia;assembly=LibraryMembresia"  x:Class="AppGimnasio.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="577" Width="800" Background="LightGreen">
+    <StackPanel HorizontalAlignment="Center" Margin="20">
+        <Border BorderBrush="LightYellow" BorderThickness="5">
+            <Label Content="GIMNASIO DEL PATRONATO DE DEPORTES" Foreground="Red" FontSize="28" HorizontalAlignment="Center"/>
+        </Border>
+        <Label Content="DNI DE LOS CLIENTES DEL GIMNASIO" Margin="20" Foreground="Blue" FontSize="28" HorizontalAlignment="Center"/>
+        <LibraryDNI:UserControl1 x:Name="controlDNI"/>
+        <Border BorderBrush="LightYellow" BorderThickness="5" HorizontalAlignment="Center">
+            <Label Content="MEMBRESÍA DE LOS CLIENTES" Foreground="Blue" FontSize="28" HorizontalAlignment="Center"/>
+        </Border>
+
+        <LibraryMembresia:UserControl1 x:Name="controlMembresia"/>
+        <Button Content="Mostrar DNI y Membresia" Margin="20" Click="Button_Click"/>
+    </StackPanel>
+</Window>
