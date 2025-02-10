@@ -26,22 +26,24 @@ namespace Paqueteria.ViewModels
                 OnPropertyChanged("PaqueteSeleccionado");
             }
         }
-       
+
 
         public int cont = 0;
-        private string descripcion;
-        public string Descripcion {
+        private string descripcion = "";
+        public string Descripcion
+        {
 
             get => descripcion;
-                
-            set {
-            
+
+            set
+            {
+
                 descripcion = value;
                 OnPropertyChanged("Descripcion");
-            } 
+            }
         }
 
-        private string estado;
+        private string estado = "";
         public string Estado
         {
 
@@ -55,7 +57,7 @@ namespace Paqueteria.ViewModels
             }
         }
 
-        public ICommand AgregarPaqueteCommand {  get; set; }
+        public ICommand AgregarPaqueteCommand { get; set; }
 
         public ICommand EliminarPaqueteCommand { get; set; }
 
@@ -67,7 +69,7 @@ namespace Paqueteria.ViewModels
 
             AgregarPaqueteCommand = new Command(Anadir);
             EliminarPaqueteCommand = new Command(Eliminar);
-
+            
             ListaPaquetes = new ObservableCollection<Paquete>()
             {
                 new Paquete()
@@ -77,6 +79,8 @@ namespace Paqueteria.ViewModels
                     Estado= "Entregado"
                 },
             };
+
+            
         }
 
 
@@ -89,7 +93,7 @@ namespace Paqueteria.ViewModels
         {
             cont++;
             Paquete paquete = new Paquete();
-            
+
             paquete.Id = cont;
             paquete.Descripcion = Descripcion;
             paquete.Estado = Estado;
@@ -97,11 +101,15 @@ namespace Paqueteria.ViewModels
             ListaPaquetes.Add(paquete);
         }
 
-        public void Eliminar() 
+        public void Eliminar()
         {
-            ListaPaquetes.Remove(PaqueteSeleccionado);
+            if (PaqueteSeleccionado != null)
+            {
+                ListaPaquetes.Remove(PaqueteSeleccionado);
+                OnPropertyChanged("ListaPaquetes");
+            }
         }
-       
+
 
 
     }

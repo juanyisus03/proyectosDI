@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploSQLClase", "EjemploSQLClase\EjemploSQLClase.csproj", "{6A538927-F3F5-42E1-ADBC-C55A9FD17BB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informes", "Informes\Informes.csproj", "{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,12 @@ Global
 		{6A538927-F3F5-42E1-ADBC-C55A9FD17BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A538927-F3F5-42E1-ADBC-C55A9FD17BB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A538927-F3F5-42E1-ADBC-C55A9FD17BB3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892D64C3-E0F2-412C-A6D0-1E5D5C75C0CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

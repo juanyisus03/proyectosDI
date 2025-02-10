@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Informes.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,10"
+            Spacing="25">
+
+
+            <Label Text="INFORMES MAUI DEL USUARIO" FontSize="Header" HorizontalOptions="CenterAndExpand"/>
+
+            <Button Text="Todos los usuarios" x:Name="btnTodos" Clicked="btnTodos_Clicked"/>
+            
+            <Button Text="Todos los usuarios de Lucena" x:Name="btnLucena" Clicked="btnLucena_Clicked"/>
+            
+            <Button Text="Todos los usuarios menores de edad" x:Name="btnMenores" Clicked="btnMenores_Clicked"/>
+
+            <CollectionView x:Name="cvUsusarios">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="20">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="{Binding Edad}"/>
+                                <Label Text="{Binding Ciudad}"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

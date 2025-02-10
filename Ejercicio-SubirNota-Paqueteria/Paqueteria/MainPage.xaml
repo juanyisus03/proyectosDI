@@ -11,8 +11,8 @@
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <Label Text="Gestion de Paqueteria" FontSize="Large"/>
 
-            <Border>
-                <VerticalStackLayout>
+            <Border HeightRequest="250">
+                <VerticalStackLayout Margin="10" Padding="20">
                     <Label Text="Agregar Nuevo Paquete" FontSize="Header" TextColor="#005AFF"/>
                     <Entry Placeholder="Descripcion del Paquete" Text="{Binding Descripcion, Mode=TwoWay}"/>
                     <Picker SelectedItem="{Binding Estado, Mode=TwoWay}">
@@ -33,7 +33,7 @@
                 <CollectionView ItemsSource="{Binding ListaPaquetes}" SelectedItem="{Binding PaqueteSeleccionado, Mode=TwoWay}" SelectionMode="Single">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
+                            
                                 <Border>
                                     <VerticalStackLayout>
                                         <HorizontalStackLayout>
@@ -48,7 +48,7 @@
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
                                 </Border>
-                            </ViewCell>
+                            
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

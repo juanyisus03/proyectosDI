@@ -5,8 +5,8 @@ namespace EjemploSQLClase
 {
     public partial class MainPage : ContentPage
     {
-       
 
+        private Usuario? userSelected;
         public MainPage()
         {
             InitializeComponent();
@@ -50,14 +50,42 @@ namespace EjemploSQLClase
             }
         }
 
-        private void btnEliminar_Clicked(object sender, EventArgs e)
+        private async void btnEliminar_Clicked(object sender, EventArgs e)
         {
-
+            if (userSelected != null)
+            {
+                await UsuarioService.GetInstance().DeleteUsuarioAsync(userSelected);
+                userSelected = null;
+                btnEliminar.IsEnabled = false;
+                CargarUsuario();
+            }
+            else {
+                await DisplayAlert("Error", "Por favor seleccione un usuario de la lista.", "Aceptar");
+            }
         }
 
         private void btnSalir_Clicked(object sender, EventArgs e)
         {
-            
+            Application.Current?.Quit();
+        }
+
+        private void lvUsuarios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            userSelected = (Usuario) e.SelectedItem;
+            btnEliminar.IsEnabled = userSelected != null;
+        }
+
+        private void swActivar_Toggled(object sender, ToggledEventArgs e)
+        {
+            stBBDD.IsEnabled = e.Value;
+
+            if (e.Value) {
+                stBBDD.BackgroundColor = Colors.LightCyan;
+            }
+            else
+            {
+                stBBDD.BackgroundColor = Colors.White;
+            }
         }
     }
 
