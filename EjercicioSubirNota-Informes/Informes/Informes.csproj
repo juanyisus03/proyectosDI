@@ -88,6 +88,18 @@
     <Compile Include="BaseDeDatosViews\PedidosLucena.Designer.cs">
       <DependentUpon>PedidosLucena.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDeDatosViews\PedidosProductosAdhesivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDeDatosViews\PedidosProductosAdhesivos.Designer.cs">
+      <DependentUpon>PedidosProductosAdhesivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDeDatosViews\PedidosProductosMenor10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDeDatosViews\PedidosProductosMenor10.Designer.cs">
+      <DependentUpon>PedidosProductosMenor10.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseDeDatosViews\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     <EmbeddedResource Include="BaseDeDatosViews\PedidosLucena.resx">
       <DependentUpon>PedidosLucena.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseDeDatosViews\PedidosProductosAdhesivos.resx">
+      <DependentUpon>PedidosProductosAdhesivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDeDatosViews\PedidosProductosMenor10.resx">
+      <DependentUpon>PedidosProductosMenor10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseDeDatosViews\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +152,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\Clientes.rdlc" />
+    <EmbeddedResource Include="Informes\PedidosMenor10.rdlc" />
+    <EmbeddedResource Include="Informes\PedidosProductosAdhesivos.rdlc" />
     <EmbeddedResource Include="Informes\Productos.rdlc" />
     <EmbeddedResource Include="Informes\PedidosLucena.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
