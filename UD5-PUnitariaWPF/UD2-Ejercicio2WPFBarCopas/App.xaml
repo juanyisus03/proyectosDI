@@ -1,0 +1,9 @@
+﻿<Application x:Class="UD2_Ejercicio2WPFBarCopas.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:UD2_Ejercicio2WPFBarCopas"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

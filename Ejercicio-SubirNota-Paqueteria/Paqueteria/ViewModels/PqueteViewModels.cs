@@ -28,7 +28,7 @@ namespace Paqueteria.ViewModels
         }
 
 
-        public int cont = 0;
+        public int cont = 1;
         private string descripcion = "";
         public string Descripcion
         {
@@ -91,14 +91,25 @@ namespace Paqueteria.ViewModels
 
         public void Anadir()
         {
-            cont++;
-            Paquete paquete = new Paquete();
+            if (descripcion == string.Empty || descripcion == null  || estado == string.Empty || estado == null){
 
-            paquete.Id = cont;
-            paquete.Descripcion = Descripcion;
-            paquete.Estado = Estado;
+                Application.Current.MainPage.DisplayAlert("Error", "Tienes que rellenar todos los datos", "Okey");
 
-            ListaPaquetes.Add(paquete);
+            }
+            else
+            {
+                cont++;
+                Paquete paquete = new Paquete();
+
+                paquete.Id = cont;
+                paquete.Descripcion = Descripcion;
+                paquete.Estado = Estado;
+
+                ListaPaquetes.Add(paquete);
+
+                Descripcion = string.Empty;
+                Estado = null;
+            }
         }
 
         public void Eliminar()

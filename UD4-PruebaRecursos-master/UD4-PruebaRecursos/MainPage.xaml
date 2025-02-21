@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD4_PruebaRecursos.MainPage">
+
+    <ContentPage.Resources>
+        <Color x:Key="ColorEncabezado">Blue</Color>
+        <Color x:Key="FondoEncabezado">LightGreen</Color>
+        <x:Double x:Key="FuenteEncabezado">20</x:Double>
+        
+
+        <Style TargetType="Button" x:Key="EstilosBoton" >
+            <Setter Property="BackgroundColor" Value="BlueViolet"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Red"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Focused">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Orange"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="Disable">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Green"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+
+
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="FontAttributes" Value="Italic"/>
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CustomStates">
+
+                        <VisualState x:Name="Valid">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="LightGreen"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                        <VisualState x:Name="InValid">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Red"/>
+                            </VisualState.Setters>
+                        </VisualState>
+
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit" />
+
+            <Label
+                Text="Hello, World!"
+                TextColor="{StaticResource ColorEncabezado}"
+                BackgroundColor="{StaticResource FondoEncabezado}"
+                FontSize="{StaticResource FuenteEncabezado}"
+                 />
+
+            <Label
+                Text="Welcome to &#10;.NET Multi-platform App UI"
+                 TextColor="{StaticResource ColorEncabezado}"
+                BackgroundColor="{StaticResource FondoEncabezado}"
+                FontSize="{StaticResource FuenteEncabezado}"
+                />
+
+            <Entry Placeholder="Ejemplo Estados visuales personalizados" x:Name="txtDatos" TextChanged="txtDatos_TextChanged"/>
+
+            <Button Text="Estilos Estáticos" WidthRequest="150" HeightRequest="50" />
+
+            <Button Text="Estilos con key" WidthRequest="200" HeightRequest="50"
+                     Style="{StaticResource EstilosBoton}"/>
+
+            <Button Text="Estilos desde App" WidthRequest="200" HeightRequest="50"
+                     Style="{StaticResource EstilosAppBoton}"/>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UD5-PUnitariaWPFGestionBebidas", "UD2-Ejercicio2WPFBarCopas\UD5-PUnitariaWPFGestionBebidas.csproj", "{8B79B716-A675-4EA1-B42A-E6F96FC7DC55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBebidas", "TestBebidas\TestBebidas.csproj", "{40B1CCBC-3B76-4A2D-81D3-6E88E2722D46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B79B716-A675-4EA1-B42A-E6F96FC7DC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B79B716-A675-4EA1-B42A-E6F96FC7DC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B79B716-A675-4EA1-B42A-E6F96FC7DC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B79B716-A675-4EA1-B42A-E6F96FC7DC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B1CCBC-3B76-4A2D-81D3-6E88E2722D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B1CCBC-3B76-4A2D-81D3-6E88E2722D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B1CCBC-3B76-4A2D-81D3-6E88E2722D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B1CCBC-3B76-4A2D-81D3-6E88E2722D46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86605337-27C3-4B2C-8BA3-72C5F5A0D473}
+	EndGlobalSection
+EndGlobal

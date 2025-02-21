@@ -1,0 +1,42 @@
+﻿<Window x:Class="UD5_PUnitariaWPFGestionBebidas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UD5_PUnitariaWPFGestionBebidas"
+        mc:Ignorable="d"
+        Title="Sistema Gestión Bebidas" Height="450" Width="800"
+        Background="DarkSalmon">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="0">
+            <Label Content="Nombre de la Bebida: "
+                   FontSize="15"
+                   FontWeight="DemiBold"/>
+            <TextBox Name="copaTextBox" Width="200" Height="30" Margin="10,0,10,0" />
+            <Button Name="btnAgregarCopa" Content="Agregar bebida" Width="100" Height="30" Click="AgregarCopa_Click"/>
+            <Button Name="btnEliminarCopa" Content="Eliminar bebida" Width="100" Height="30" Click="EliminarCopa_Click" 
+                    IsEnabled="False"/>
+        </StackPanel>
+
+        <ListBox Name="copaListBox" Grid.Row="1" Margin="10" 
+                 SelectionChanged="copaListBox_SelectionChanged">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Eliminar bebida" Click="EliminarCopa_Click" />
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Total de Bebidas:" FontSize="16" Margin="0,0,10,0"/>
+            <TextBlock Name="totalCopasTextBlock" Text="0" FontSize="16"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

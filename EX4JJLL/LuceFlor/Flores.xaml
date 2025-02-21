@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:conexion="clr-namespace:LuceFlor.ViewModels"
+            x:Class="LuceFlor.Flores"
+            Title="Flores">
+    <ContentPage.Resources>
+        <Style x:Key="LabelTitulo" TargetType="Label">
+            <Setter Property="TextColor" Value="Green"/>
+            <Setter Property="FontSize" Value="32"/>
+        </Style>
+        
+        <Style x:Key="Descripcion" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="BackgroundColor" Value="Salmon"/>
+            <Setter Property="Margin" Value="7"/>
+        </Style>
+        <Style x:Key="ImagenCarousel" TargetType="Image">
+            <Setter Property="Aspect" Value="AspectFit"/>
+            <Setter Property="HeightRequest">
+                <Setter.Value>
+                    <x:Double>120.0</x:Double>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.BindingContext>
+        <conexion:FloresViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+
+        <Label Text="RAMOS DISPONIBLES" TextColor="Green" Style="{StaticResource LabelTitulo}" />
+
+        <CarouselView ItemsSource="{Binding flores}" Margin="0,0,0,20" CurrentItem="{Binding FlorSeleccionada, Mode=TwoWay}" x:Name="cvFlores" HeightRequest="200">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border BackgroundColor="Salmon">
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout WidthRequest="300">
+                                <Label Text="Nombre de la Flor:" Style="{StaticResource Descripcion}"/>
+                                <Label Text="{Binding Nombre, Mode=OneWay}" Style="{StaticResource Descripcion}"/>
+                            </HorizontalStackLayout>
+
+                            <Image Source="{Binding Imagen, Mode=OneWay}"  Style="{StaticResource ImagenCarousel}"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <Border BackgroundColor="SkyBlue" HeightRequest="100" VerticalOptions="CenterAndExpand">
+            <VerticalStackLayout>
+                <HorizontalStackLayout WidthRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Label Text="Precio de la Flor: " VerticalOptions="Center"/>
+                    <Label Text="{Binding FlorSeleccionada.Precio, Mode=TwoWay}" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

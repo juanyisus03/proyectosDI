@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuceFlor.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="colorBlanco">White</Color>
+            <Color x:Key="colorNaranja">Orange</Color>
+            <Color x:Key="colorPlateado">Gray</Color>
+            <FontSize x:Key="tamanoTitulo">
+            </FontSize>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="FLORISTERÍA ONLINE DE LA SUBBÉTICA" TextColor="{StaticResource colorBlanco}" FontSize="Header"/>
+            <Image Source="portadafloristeria.png" Aspect="AspectFit" WidthRequest="400"/>
+
+
+            <StackLayout HeightRequest="10" Margin="10" BackgroundColor="{StaticResource colorPlateado}" />
+
+            <Label Text="En esta floristeria cuidamos los detalles hasta el ultimo momento"/>
+
+            <StackLayout HeightRequest="5" Margin="0,10,0,10" BackgroundColor="{StaticResource colorPlateado}" />
+
+            <StackLayout HeightRequest="10" Margin="10" BackgroundColor="{StaticResource colorNaranja}" />
+
+            <Label Text="Puedes realizar todo tipos de encargos: Ramos de flores, Arreglos florales y flores secas"/>
+            <StackLayout HeightRequest="5" Margin="0,10,0,10" BackgroundColor="{StaticResource colorPlateado}" />
+
+            <StackLayout HeightRequest="10" Margin="10" BackgroundColor="{StaticResource colorPlateado}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

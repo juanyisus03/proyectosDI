@@ -11,11 +11,11 @@
         <VerticalStackLayout Padding="30,0" Spacing="25">
             <Label Text="Gestion de Paqueteria" FontSize="Large"/>
 
-            <Border HeightRequest="250">
-                <VerticalStackLayout Margin="10" Padding="20">
+            <Border HeightRequest="300">
+                <VerticalStackLayout Margin="10" Padding="20" Spacing="10">
                     <Label Text="Agregar Nuevo Paquete" FontSize="Header" TextColor="#005AFF"/>
                     <Entry Placeholder="Descripcion del Paquete" Text="{Binding Descripcion, Mode=TwoWay}"/>
-                    <Picker SelectedItem="{Binding Estado, Mode=TwoWay}">
+                    <Picker SelectedItem="{Binding Estado, Mode=TwoWay}" Title="Elija estado del paquete">
                         <Picker.Items>
                             <x:String>Pendiente</x:String>
                             <x:String>En transito</x:String>
@@ -34,16 +34,16 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             
-                                <Border>
-                                    <VerticalStackLayout>
+                                <Border Margin="10">
+                                    <VerticalStackLayout Margin="20" Spacing="10">
                                         <HorizontalStackLayout>
-                                            <Label Text="Id:"/>
+                                            <Label Text="Id:  "/>
                                             <Label Text="{Binding Id}"/>
                                         </HorizontalStackLayout><HorizontalStackLayout>
-                                            <Label Text="Descripcion:"/>
+                                            <Label Text="Descripcion:  "/>
                                             <Label Text="{Binding Descripcion}"/>
                                         </HorizontalStackLayout><HorizontalStackLayout>
-                                            <Label Text="Estado:"/>
+                                            <Label Text="Estado:  "/>
                                             <Label Text="{Binding Estado}"/>
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>

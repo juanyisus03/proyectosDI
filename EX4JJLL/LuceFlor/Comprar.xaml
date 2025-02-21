@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuceFlor.Comprar"
+             xmlns:conexion="clr-namespace:LuceFlor.ViewModels"
+             Title="Comprar">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Green"/>
+            <Setter Property="TextColor" Value="Red"/>
+            
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <conexion:CompraViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView BackgroundColor="AliceBlue" Margin="20">
+        <Border HeightRequest="1000" WidthRequest="300">
+            <VerticalStackLayout Padding="30,0" Spacing="25">
+
+
+
+                <Label Text="Hacer pedido de un ramo de flores" FontSize="Header" TextColor="#005AFF"/>
+                <Picker SelectedItem="{Binding FlorSeleccionada, Mode=TwoWay}" ItemsSource="{Binding Flores}"/>
+
+
+                <Entry IsReadOnly="True" Text="{Binding FlorSeleccionada.Precio, Mode=TwoWay}"/>
+
+                <HorizontalStackLayout>
+                    <Label Text="Numero de flores:" Margin="0,0,10,0"/>
+                    <Label Text="{Binding numFlores , Mode=TwoWay}"/>
+                </HorizontalStackLayout>
+
+                <Slider Minimum="1" Maximum="10" Value="{Binding numFlores, Mode=TwoWay}"></Slider>
+                
+                <Button Text="Comprar Ramo" Command="{Binding MostrarTicketCommand}"/>
+                
+                <Button Text="Limpiar Formulario" Command="{Binding LimpiarCommand}" />
+
+
+
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+
+</ContentPage>
